@@ -1,0 +1,90 @@
+{% extends "global/base.html" %}
+
+{% block buttons %}
+<button class="btn btn-danger btn-sm m-1">
+  <i class="icon-Delete"></i>
+</button>
+<button id="button_save" class="btn btn-primary btn-sm m-1">
+  <i class="icon-Save"></i>
+</button>
+{% endblock buttons %}
+
+{% block content %}
+<div class="card border border-0 shadow p-2">
+  <div class="card-body">
+    <!-- Alert -->
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{ message }}</strong>
+      </div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- Form -->
+    <form id="create_supplier" action="" autocomplete="off" method="post">
+      {% csrf_token %}
+      <!-- Geral Data -->
+      <div class="row">
+        <div class="col-6">
+          {% for field in form %}
+            {% if forloop.counter <= 3 %}
+              {{field.label_tag}}{{field}}{{field.error}}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="col-6">
+          {% for field in form %}
+            {% if forloop.counter > 3 %}
+            {{field.label_tag}}{{field}}{{field.error}}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="card bg-light mt-3">
+        <div class="card-header">
+          <h5><strong>Endereço</strong></h5>
+        </div>
+      </div>
+
+      <!-- Address Data -->
+      <div class="row">
+        <div class="col-6">
+          {% for field in address_form %}
+            {% if forloop.counter <= 4 %}
+              {{field.label_tag}}{{field}}{{field.error}}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="col-6">
+          {% for field in address_form %}
+            {% if forloop.counter > 4 %}
+            {{field.label_tag}}{{field}}{{field.error}}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
+
+{% block page_name %}
+<i class="icon-Package mt-2 mr-2" style="font-size: 25px;"></i>
+<h5 class="mt-2"><strong>{{ page_name }}</strong></h5>
+{% endblock page_name %}
+
+{% block script_js %}
+<script>
+  const form = document.getElementById('create_supplier');
+  const button_save = document.getElementById('button_save');
+
+  button_save.addEventListener('click', () => {
+    form.submit();
+  });
+</script>
+{% endblock script_js %}

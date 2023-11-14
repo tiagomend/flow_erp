@@ -1,0 +1,45 @@
+{% extends 'global/body.html' %}
+
+{% block base %}
+  <!-- Component Header start -->
+  {% include 'global/header.html' %}
+
+  <div class="container-fluid p-3 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="d-flex justify-content-start">
+            {% block page_name %}{% endblock page_name %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <!-- Component ButtonSet start -->
+          <div class="d-flex justify-content-end">
+            {% block buttons %}{% endblock buttons %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Component Main start -->
+  <div id="main" class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <!-- Component Navigation start -->
+          {% include "global/navigation.html" %}
+        </div>
+
+        <div class="col-sm-9">
+          <!-- Component Content start -->
+          {% block content %}{% endblock content %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock base %}
+
+{% block script %}
+  {% block script_js %}{% endblock script_js %}
+{% endblock script %}

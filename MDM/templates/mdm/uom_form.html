@@ -1,0 +1,62 @@
+{% extends "global/base.html" %}
+
+{% block buttons %}
+<button class="btn btn-light btn-sm bg-white border m-1">
+  <i class="icon-ArrowBack"></i>
+</button>
+<button class="btn btn-light btn-sm bg-white border m-1">
+  <i class="icon-ArrowForward"></i>
+</button>
+<button class="btn btn-light btn-sm bg-white border m-1">
+  <i class="icon-Print"></i>
+</button>
+<button class="btn btn-light btn-sm bg-white border m-1">
+  <i class="icon-MoreVert"></i>
+</button>
+<button class="btn btn-danger btn-sm m-1">
+  <i class="icon-Delete"></i>
+</button>
+<button id="button_save" class="btn btn-primary btn-sm m-1">
+  <i class="icon-Save"></i>
+</button>
+{% endblock buttons %}
+
+{% block content %}
+<div class="card border border-0 shadow p-2">
+  <div class="card-body">
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{ message }}</strong>
+      </div>
+      {% endfor %}
+    {% endif %}
+    <div class="row">
+      <div class="col-sm-6">
+        <form id="create_uom" action="" autocomplete="off" method="post">
+          {% csrf_token %}
+          {{ form }}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block page_name %}
+<i class="icon-Package mt-2 mr-2" style="font-size: 25px;"></i>
+<h5 class="mt-2"><strong>{{ page_name }}</strong></h5>
+{% endblock page_name %}
+
+{% block script_js %}
+<script>
+  const form = document.getElementById('create_uom');
+  const button_save = document.getElementById('button_save');
+
+  button_save.addEventListener('click', () => {
+    console.log('Aqui')
+    form.submit();
+  });
+</script>
+{% endblock script_js %}

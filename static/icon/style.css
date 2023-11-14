@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?nw4ul');
+  src:  url('fonts/icomoon.eot?nw4ul#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?nw4ul') format('truetype'),
+    url('fonts/icomoon.woff?nw4ul') format('woff'),
+    url('fonts/icomoon.svg?nw4ul#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AccountCircleFill:before {
+  content: "\e900";
+}
+.icon-ArrowBack:before {
+  content: "\e901";
+}
+.icon-ArrowForward:before {
+  content: "\e902";
+}
+.icon-BookmarkManager:before {
+  content: "\e903";
+}
+.icon-Build:before {
+  content: "\e904";
+}
+.icon-CheckCircleFill:before {
+  content: "\e905";
+}
+.icon-ChevronRight:before {
+  content: "\e906";
+}
+.icon-Construction:before {
+  content: "\e907";
+}
+.icon-ContentCopy:before {
+  content: "\e908";
+}
+.icon-Database:before {
+  content: "\e909";
+}
+.icon-Delete:before {
+  content: "\e90a";
+}
+.icon-Download:before {
+  content: "\e90b";
+}
+.icon-Edit:before {
+  content: "\e90c";
+}
+.icon-EventAvailable:before {
+  content: "\e90d";
+}
+.icon-Finance:before {
+  content: "\e90e";
+}
+.icon-FolderShared:before {
+  content: "\e90f";
+}
+.icon-InsertChart:before {
+  content: "\e910";
+}
+.icon-Inventory:before {
+  content: "\e911";
+}
+.icon-Layers:before {
+  content: "\e912";
+}
+.icon-Like:before {
+  content: "\e913";
+}
+.icon-LocalShipping:before {
+  content: "\e914";
+}
+.icon-Logout:before {
+  content: "\e915";
+}
+.icon-MoreVert:before {
+  content: "\e916";
+}
+.icon-NoLike:before {
+  content: "\e917";
+}
+.icon-Notification:before {
+  content: "\e918";
+}
+.icon-Package:before {
+  content: "\e919";
+}
+.icon-PrecisionManufacturing:before {
+  content: "\e91a";
+}
+.icon-Print:before {
+  content: "\e91b";
+}
+.icon-Save:before {
+  content: "\e91c";
+}
+.icon-Search:before {
+  content: "\e91d";
+}
+.icon-Shield:before {
+  content: "\e91e";
+}
+.icon-ShoppingBag:before {
+  content: "\e91f";
+}
+.icon-ToggleOff:before {
+  content: "\e920";
+}
+.icon-ToggleOn:before {
+  content: "\e921";
+}
+.icon-ToolsPower:before {
+  content: "\e922";
+}
+.icon-Warehouse:before {
+  content: "\e923";
+}
+.icon-Warning:before {
+  content: "\e924";
+}
+.icon-WarningFill:before {
+  content: "\e925";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}

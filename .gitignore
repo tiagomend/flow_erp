@@ -1,0 +1,27 @@
+# Arquivos e diretórios específicos do Django
+*.pyc
+__pycache__/
+*.sqlite3
+*.pyo
+*.pyc
+*.pyd
+*/migrations/*
+
+
+!*/migrations/__init__.py
+
+# Diretórios gerados pelo Django
+/staticfiles/
+/media/
+
+# Arquivos de configuração sensíveis
+.env
+
+# Arquivos de log
+*.log
+*commit.txt
+*commit_messages.txt
+
+# Ambientes virtuais
+venv/
+env/
